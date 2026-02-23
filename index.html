@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
+        /* --- Базовые стили и анимации (адаптированы из предыдущих версий) --- */
         * {
             margin: 0;
             padding: 0;
@@ -44,47 +45,38 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
         }
-
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
-
         @keyframes slideInLeft {
             from { transform: translateX(-100px); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
-
         @keyframes slideInRight {
             from { transform: translateX(100px); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
-
         @keyframes fadeInUp {
             from { transform: translateY(50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         @keyframes glow {
             0%, 100% { box-shadow: 0 0 10px rgba(67, 97, 238, 0.5); }
             50% { box-shadow: 0 0 20px rgba(67, 97, 238, 0.8); }
         }
-
         @keyframes rotate {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-
         @keyframes typewriter {
             from { width: 0; }
             to { width: 100%; }
         }
-
         @keyframes blinkCursor {
             0%, 100% { border-color: transparent; }
             50% { border-color: var(--light-text); }
@@ -100,7 +92,6 @@
             position: relative;
             overflow: hidden;
         }
-
         header::before {
             content: "";
             position: absolute;
@@ -111,7 +102,6 @@
             background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
             animation: rotate 100s linear infinite;
         }
-
         .floating-elements {
             position: absolute;
             width: 100%;
@@ -120,14 +110,12 @@
             left: 0;
             pointer-events: none;
         }
-
         .floating-element {
             position: absolute;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
-
         .floating-element:nth-child(1) {
             width: 80px;
             height: 80px;
@@ -135,7 +123,6 @@
             left: 10%;
             animation-delay: 0s;
         }
-
         .floating-element:nth-child(2) {
             width: 60px;
             height: 60px;
@@ -144,7 +131,6 @@
             animation-delay: 2s;
             animation-duration: 8s;
         }
-
         .floating-element:nth-child(3) {
             width: 40px;
             height: 40px;
@@ -153,7 +139,6 @@
             animation-delay: 4s;
             animation-duration: 7s;
         }
-
         .floating-element:nth-child(4) {
             width: 50px;
             height: 50px;
@@ -161,19 +146,16 @@
             left: 15%;
             animation-delay: 1s;
         }
-
         .header-content {
             position: relative;
             z-index: 1;
         }
-
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
         }
-
         header p {
             font-size: 1.2rem;
             max-width: 800px;
@@ -194,13 +176,11 @@
             top: 0;
             z-index: 100;
         }
-
         nav .container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
-
         nav a {
             color: var(--dark-text);
             text-decoration: none;
@@ -210,7 +190,6 @@
             position: relative;
             overflow: hidden;
         }
-
         nav a::before {
             content: '';
             position: absolute;
@@ -222,22 +201,10 @@
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
-
-        nav a:hover::before {
-            width: 80%;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        nav a.active::before {
-            width: 80%;
-        }
-
-        nav a.active {
-            color: var(--primary-color);
-        }
+        nav a:hover::before { width: 80%; }
+        nav a:hover { color: var(--primary-color); }
+        nav a.active::before { width: 80%; }
+        nav a.active { color: var(--primary-color); }
 
         /* Main content */
         section {
@@ -246,12 +213,10 @@
             transform: translateY(30px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-
         section.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
@@ -262,7 +227,6 @@
             left: 50%;
             transform: translateX(-50%);
         }
-
         .section-title::after {
             content: '';
             position: absolute;
@@ -275,7 +239,6 @@
             border-radius: 2px;
             animation: pulse 2s infinite;
         }
-
         .intro-text {
             max-width: 800px;
             margin: 0 auto 2rem;
@@ -286,7 +249,7 @@
             animation: fadeInUp 1s ease 0.5s forwards;
         }
 
-        /* Comparison Section */
+        /* Comparison cards */
         .comparison-container {
             display: flex;
             flex-wrap: wrap;
@@ -294,7 +257,6 @@
             justify-content: center;
             margin-top: 2rem;
         }
-
         .type-card {
             background-color: white;
             border-radius: 12px;
@@ -306,60 +268,31 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             opacity: 0;
         }
-
-        .type-card.animate-left {
-            animation: slideInLeft 0.8s ease forwards;
-        }
-
-        .type-card.animate-right {
-            animation: slideInRight 0.8s ease forwards;
-        }
-
+        .type-card.animate-left { animation: slideInLeft 0.8s ease forwards; }
+        .type-card.animate-right { animation: slideInRight 0.8s ease forwards; }
         .type-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-
-        .introvert-card {
-            border-top: 5px solid var(--introvert-color);
-        }
-
-        .extrovert-card {
-            border-top: 5px solid var(--extrovert-color);
-        }
-
+        .introvert-card { border-top: 5px solid var(--introvert-color); }
+        .extrovert-card { border-top: 5px solid var(--extrovert-color); }
         .type-title {
             display: flex;
             align-items: center;
             margin-bottom: 1.5rem;
         }
-
         .type-title i {
             font-size: 1.8rem;
             margin-right: 15px;
             transition: transform 0.5s ease;
         }
-
-        .type-card:hover .type-title i {
-            transform: rotate(15deg) scale(1.2);
-        }
-
-        .introvert-title i {
-            color: var(--introvert-color);
-        }
-
-        .extrovert-title i {
-            color: var(--extrovert-color);
-        }
-
-        .type-title h3 {
-            font-size: 1.8rem;
-        }
-
+        .type-card:hover .type-title i { transform: rotate(15deg) scale(1.2); }
+        .introvert-title i { color: var(--introvert-color); }
+        .extrovert-title i { color: var(--extrovert-color); }
+        .type-title h3 { font-size: 1.8rem; }
         .characteristics-list {
             list-style-type: none;
         }
-
         .characteristics-list li {
             padding: 0.5rem 0;
             border-bottom: 1px solid #eee;
@@ -367,28 +300,15 @@
             align-items: flex-start;
             transition: transform 0.3s ease;
         }
-
-        .characteristics-list li:hover {
-            transform: translateX(10px);
-        }
-
+        .characteristics-list li:hover { transform: translateX(10px); }
         .characteristics-list li i {
             margin-right: 10px;
             margin-top: 5px;
             transition: transform 0.3s ease;
         }
-
-        .characteristics-list li:hover i {
-            transform: scale(1.3);
-        }
-
-        .introvert-list li i {
-            color: var(--introvert-color);
-        }
-
-        .extrovert-list li i {
-            color: var(--extrovert-color);
-        }
+        .characteristics-list li:hover i { transform: scale(1.3); }
+        .introvert-list li i { color: var(--introvert-color); }
+        .extrovert-list li i { color: var(--extrovert-color); }
 
         /* Famous People Section */
         .famous-grid {
@@ -397,7 +317,6 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .famous-card {
             background-color: white;
             border-radius: 12px;
@@ -405,20 +324,26 @@
             box-shadow: var(--shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .famous-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
-
         .famous-image {
             height: 200px;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             position: relative;
-            background-color: #e0e0e0; /* fallback */
+            background-color: #2c3e50; /* fallback background */
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 1rem;
         }
-
         .famous-type {
             position: absolute;
             top: 1rem;
@@ -428,36 +353,23 @@
             color: white;
             font-weight: bold;
             font-size: 0.9rem;
+            z-index: 2;
         }
-
-        .type-introvert {
-            background-color: var(--introvert-color);
-        }
-
-        .type-extrovert {
-            background-color: var(--extrovert-color);
-        }
-
-        .famous-info {
-            padding: 1.5rem;
-        }
-
+        .type-introvert { background-color: var(--introvert-color); }
+        .type-extrovert { background-color: var(--extrovert-color); }
+        .famous-info { padding: 1.5rem; }
         .famous-info h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: var(--secondary-color);
         }
-
         .famous-info h4 {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 0.5rem;
             font-style: italic;
         }
-
-        .famous-info p {
-            margin-bottom: 0.5rem;
-        }
+        .famous-info p { margin-bottom: 0.5rem; }
 
         /* Quiz Section */
         .quiz-container {
@@ -469,21 +381,18 @@
             margin: 0 auto;
             animation: glow 3s infinite alternate;
         }
-
         .question {
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
             color: var(--secondary-color);
             font-weight: 600;
         }
-
         .options {
             display: flex;
             flex-direction: column;
             gap: 1rem;
             margin-bottom: 2rem;
         }
-
         .option {
             padding: 1rem 1.5rem;
             background-color: #f8f9fa;
@@ -494,7 +403,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .option::before {
             content: '';
             position: absolute;
@@ -505,22 +413,16 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
             transition: left 0.5s;
         }
-
-        .option:hover::before {
-            left: 100%;
-        }
-
+        .option:hover::before { left: 100%; }
         .option:hover {
             background-color: #e9ecef;
             transform: translateX(5px);
         }
-
         .option.selected {
             border-color: var(--primary-color);
             background-color: rgba(67, 97, 238, 0.1);
             transform: translateX(10px);
         }
-
         .quiz-btn {
             background-color: var(--primary-color);
             color: white;
@@ -535,7 +437,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .quiz-btn::after {
             content: '';
             position: absolute;
@@ -549,28 +450,16 @@
             transform: scale(1, 1) translate(-50%);
             transform-origin: 50% 50%;
         }
-
-        .quiz-btn:focus:not(:active)::after {
-            animation: ripple 1s ease-out;
-        }
-
+        .quiz-btn:focus:not(:active)::after { animation: ripple 1s ease-out; }
         @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(50, 50);
-                opacity: 0;
-            }
+            0% { transform: scale(0, 0); opacity: 1; }
+            100% { transform: scale(50, 50); opacity: 0; }
         }
-
         .quiz-btn:hover {
             background-color: var(--secondary-color);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-
         .result {
             text-align: center;
             padding: 2rem;
@@ -579,41 +468,35 @@
             margin-top: 2rem;
             animation: fadeInUp 0.8s ease;
         }
-
         .introvert-result {
             background-color: rgba(58, 134, 255, 0.1);
             border: 2px solid var(--introvert-color);
         }
-
         .extrovert-result {
             background-color: rgba(247, 37, 133, 0.1);
             border: 2px solid var(--extrovert-color);
         }
-
         .ambivert-result {
             background-color: rgba(76, 201, 240, 0.1);
             border: 2px solid var(--accent-color);
         }
 
-        /* Animated progress bars */
+        /* Stats bars */
         .stats-container {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
             margin-top: 2rem;
         }
-
         .stat-item {
             display: flex;
             flex-direction: column;
         }
-
         .stat-label {
             display: flex;
             justify-content: space-between;
             margin-bottom: 0.5rem;
         }
-
         .stat-bar {
             height: 10px;
             background-color: #e9ecef;
@@ -621,21 +504,104 @@
             overflow: hidden;
             position: relative;
         }
-
         .stat-fill {
             height: 100%;
             border-radius: 5px;
             width: 0;
             transition: width 1.5s ease-in-out;
         }
+        .introvert-fill { background-color: var(--introvert-color); }
+        .extrovert-fill { background-color: var(--extrovert-color); }
 
-        .introvert-fill {
-            background-color: var(--introvert-color);
+        /* Registration Modal */
+        .modal {
+            display: flex;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            color: white;
+            animation: fadeInUp 0.8s ease;
+        }
+        .modal-content h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .modal-content p { margin-bottom: 2rem; opacity: 0.9; }
+        .modal-content input {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+        }
+        .modal-content button {
+            background-color: white;
+            color: #667eea;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        .modal-content button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .extrovert-fill {
-            background-color: var(--extrovert-color);
+        /* Results Table */
+        .results-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
         }
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .results-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        .results-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .results-table tr:hover { background-color: #f5f5f5; }
+        .result-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .badge-introvert { background-color: var(--introvert-color); }
+        .badge-extrovert { background-color: var(--extrovert-color); }
+        .badge-ambivert { background-color: var(--accent-color); }
 
         /* Footer */
         footer {
@@ -647,7 +613,6 @@
             position: relative;
             overflow: hidden;
         }
-
         footer::before {
             content: "";
             position: absolute;
@@ -657,20 +622,15 @@
             height: 5px;
             background: linear-gradient(to right, var(--introvert-color), var(--extrovert-color));
         }
-
         .footer-content {
             max-width: 800px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
         }
+        footer p { margin-bottom: 1rem; opacity: 0.9; }
 
-        footer p {
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-
-        /* Particle animation */
+        /* Particles */
         .particles {
             position: absolute;
             width: 100%;
@@ -679,7 +639,6 @@
             left: 0;
             pointer-events: none;
         }
-
         .particle {
             position: absolute;
             background-color: rgba(255, 255, 255, 0.2);
@@ -687,7 +646,7 @@
             animation: float 8s infinite linear;
         }
 
-        /* Scroll progress indicator */
+        /* Scroll progress */
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -701,31 +660,12 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            nav .container {
-                justify-content: space-around;
-            }
-            
-            nav a {
-                padding: 0.8rem 1rem;
-                font-size: 0.9rem;
-            }
-            
-            .quiz-container {
-                padding: 1.5rem;
-            }
-            
-            .type-card {
-                min-width: 100%;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
+            .section-title { font-size: 1.8rem; }
+            nav .container { justify-content: space-around; }
+            nav a { padding: 0.8rem 1rem; font-size: 0.9rem; }
+            .quiz-container { padding: 1.5rem; }
+            .type-card { min-width: 100%; }
+            header h1 { font-size: 2rem; }
             header p {
                 font-size: 1rem;
                 white-space: normal;
@@ -737,9 +677,19 @@
     </style>
 </head>
 <body>
-    <!-- Scroll progress indicator -->
+    <!-- Scroll progress -->
     <div class="scroll-progress" id="scrollProgress"></div>
-    
+
+    <!-- Registration modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <h2>Добро пожаловать!</h2>
+            <p>Представьтесь, пожалуйста</p>
+            <input type="text" id="userName" placeholder="Введите ваше имя" required>
+            <button id="registerBtn">Начать</button>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="floating-elements">
@@ -761,26 +711,19 @@
             <a href="#comparison">Сравнение</a>
             <a href="#famous">Знаменитости</a>
             <a href="#quiz">Тест</a>
+            <a href="#results">Результаты</a>
             <a href="#tips">Советы</a>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="container">
-        <!-- Introduction -->
+        <!-- Главная -->
         <section id="home">
             <h2 class="section-title">Кто такие интроверты и экстраверты?</h2>
-            <p class="intro-text">
-                Интроверсия и экстраверсия — это основные типы личности, введённые психологом Карлом Юнгом. 
-                Эти понятия описывают, откуда человек черпает энергию и как взаимодействует с миром.
-            </p>
-            
+            <p class="intro-text">Интроверсия и экстраверсия — это основные типы личности, введённые психологом Карлом Юнгом. Эти понятия описывают, откуда человек черпает энергию и как взаимодействует с миром.</p>
             <div class="comparison-container">
                 <div class="type-card introvert-card">
-                    <div class="type-title introvert-title">
-                        <i class="fas fa-book-reader"></i>
-                        <h3>Интроверт</h3>
-                    </div>
+                    <div class="type-title introvert-title"><i class="fas fa-book-reader"></i><h3>Интроверт</h3></div>
                     <p>Интроверты черпают энергию из внутреннего мира — мыслей, впечатлений и чувств. Они чувствуют себя комфортно в одиночестве или в малых группах.</p>
                     <ul class="characteristics-list introvert-list">
                         <li><i class="fas fa-check-circle"></i> Предпочитают уединение для восстановления сил</li>
@@ -790,12 +733,8 @@
                         <li><i class="fas fa-check-circle"></i> Чувствительны к внешним раздражителям</li>
                     </ul>
                 </div>
-                
                 <div class="type-card extrovert-card">
-                    <div class="type-title extrovert-title">
-                        <i class="fas fa-users"></i>
-                        <h3>Экстраверт</h3>
-                    </div>
+                    <div class="type-title extrovert-title"><i class="fas fa-users"></i><h3>Экстраверт</h3></div>
                     <p>Экстраверты получают энергию от внешнего мира — действий, людей и событий. Они активно взаимодействуют с окружающими и часто берут на себя роль лидера.</p>
                     <ul class="characteristics-list extrovert-list">
                         <li><i class="fas fa-check-circle"></i> Подзаряжаются в компании других людей</li>
@@ -806,188 +745,98 @@
                     </ul>
                 </div>
             </div>
-            
-            <!-- Animated stats -->
+            <!-- Анимированная статистика -->
             <div class="stats-container">
                 <div class="stat-item">
-                    <div class="stat-label">
-                        <span>Интроверты в мире</span>
-                        <span id="introvertPercent">0%</span>
-                    </div>
-                    <div class="stat-bar">
-                        <div class="stat-fill introvert-fill" id="introvertBar"></div>
-                    </div>
+                    <div class="stat-label"><span>Интроверты в мире</span><span id="introvertPercent">0%</span></div>
+                    <div class="stat-bar"><div class="stat-fill introvert-fill" id="introvertBar"></div></div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">
-                        <span>Экстраверты в мире</span>
-                        <span id="extrovertPercent">0%</span>
-                    </div>
-                    <div class="stat-bar">
-                        <div class="stat-fill extrovert-fill" id="extrovertBar"></div>
-                    </div>
+                    <div class="stat-label"><span>Экстраверты в мире</span><span id="extrovertPercent">0%</span></div>
+                    <div class="stat-bar"><div class="stat-fill extrovert-fill" id="extrovertBar"></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Comparison -->
+        <!-- Сравнение -->
         <section id="comparison">
             <h2 class="section-title">Сравнение типов личности</h2>
-            
             <div class="quiz-container">
                 <h3>Как интроверты и экстраверты реагируют в разных ситуациях:</h3>
                 <div style="overflow-x: auto; margin-top: 2rem;">
-                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
-                        <thead>
-                            <tr style="background-color: var(--primary-color); color: white;">
-                                <th style="padding: 1rem; text-align: left;">Ситуация</th>
-                                <th style="padding: 1rem; text-align: left;">Интроверт</th>
-                                <th style="padding: 1rem; text-align: left;">Экстраверт</th>
-                            </tr>
-                        </thead>
+                    <table style="width:100%; border-collapse:collapse; margin-top:1rem;">
+                        <thead><tr style="background-color:var(--primary-color); color:white;"><th style="padding:1rem; text-align:left;">Ситуация</th><th style="padding:1rem; text-align:left;">Интроверт</th><th style="padding:1rem; text-align:left;">Экстраверт</th></tr></thead>
                         <tbody>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem; font-weight: 600;">Вечеринка с незнакомыми людьми</td>
-                                <td style="padding: 1rem;">Будет чувствовать усталость, предпочтёт общаться с одним-двумя людьми</td>
-                                <td style="padding: 1rem;">Легко заведёт новые знакомства, получит энергию от общения</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem; font-weight: 600;">Принятие решения</td>
-                                <td style="padding: 1rem;">Обдумает всё в тишине, взвесит все варианты</td>
-                                <td style="padding: 1rem;">Обсудит с другими, чтобы прояснить свои мысли</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem; font-weight: 600;">Отдых после трудного дня</td>
-                                <td style="padding: 1rem;">Проведёт время в одиночестве за чтением или хобби</td>
-                                <td style="padding: 1rem;">Встретится с друзьями, сходит на мероприятие</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; font-weight: 600;">Работа в команде</td>
-                                <td style="padding: 1rem;">Предпочтёт индивидуальные задания, затем обсуждение результатов</td>
-                                <td style="padding: 1rem;">Проявит активность в обсуждениях, будет генерировать идеи в группе</td>
-                            </tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:1rem; font-weight:600;">Вечеринка с незнакомыми людьми</td><td style="padding:1rem;">Будет чувствовать усталость, предпочтёт общаться с одним-двумя людьми</td><td style="padding:1rem;">Легко заведёт новые знакомства, получит энергию от общения</td></tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:1rem; font-weight:600;">Принятие решения</td><td style="padding:1rem;">Обдумает всё в тишине, взвесит все варианты</td><td style="padding:1rem;">Обсудит с другими, чтобы прояснить свои мысли</td></tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:1rem; font-weight:600;">Отдых после трудного дня</td><td style="padding:1rem;">Проведёт время в одиночестве за чтением или хобби</td><td style="padding:1rem;">Встретится с друзьями, сходит на мероприятие</td></tr>
+                            <tr><td style="padding:1rem; font-weight:600;">Работа в команде</td><td style="padding:1rem;">Предпочтёт индивидуальные задания, затем обсуждение результатов</td><td style="padding:1rem;">Проявит активность в обсуждениях, будет генерировать идеи в группе</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
 
-        <!-- Famous People -->
+        <!-- Знаменитые художники (обновлённые ссылки) -->
         <section id="famous">
             <h2 class="section-title">Знаменитые художники: интроверты и экстраверты</h2>
             <p class="intro-text">Творчество часто отражает внутренний мир художника. Посмотрим на известных мастеров с разными типами личности.</p>
-            
             <div class="famous-grid">
                 <!-- Интроверты -->
                 <div class="famous-card">
-                    <div class="famous-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg/800px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg');">
-                        <span class="famous-type type-introvert">Интроверт</span>
-                    </div>
-                    <div class="famous-info">
-                        <h3>Винсент Ван Гог</h3>
-                        <h4>«Звёздная ночь»</h4>
-                        <p>Голландский художник-постимпрессионист. Вёл уединённый образ жизни, много времени проводил в размышлениях и работе. Его картины полны глубоких эмоций и внутренних переживаний.</p>
-                    </div>
+                    <div class="famous-image" style="background-image: url('https://gallerix.ru/ru/Vincent-Van-Gogh/pic/glrx-470746091');"><span class="famous-type type-introvert">Интроверт</span></div>
+                    <div class="famous-info"><h3>Винсент Ван Гог</h3><h4>«Звёздная ночь»</h4><p>Голландский художник-постимпрессионист. Вёл уединённый образ жизни, много времени проводил в размышлениях и работе. Его картины полны глубоких эмоций и внутренних переживаний.</p></div>
                 </div>
-                
                 <div class="famous-card">
-                    <div class="famous-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Marc_Chagall_1915.jpg/800px-Marc_Chagall_1915.jpg');">
-                        <span class="famous-type type-introvert">Интроверт</span>
-                    </div>
-                    <div class="famous-info">
-                        <h3>Марк Шагал</h3>
-                        <h4>«Прогулка»</h4>
-                        <p>Российский и французский художник еврейского происхождения. Несмотря на бурную жизнь, в творчестве часто обращался к внутренним образам, мечтам и воспоминаниям. Предпочитал уединённую работу.</p>
-                    </div>
+                    <div class="famous-image" style="background-image: url('https://rusmuseumvrm.ru/data/collections/painting/19_20/zhb_1726/pict/zhb_1726_1.jpg');"><span class="famous-type type-introvert">Интроверт</span></div>
+                    <div class="famous-info"><h3>Марк Шагал</h3><h4>«Прогулка»</h4><p>Российский и французский художник еврейского происхождения. Несмотря на бурную жизнь, в творчестве часто обращался к внутренним образам, мечтам и воспоминаниям. Предпочитал уединённую работу.</p></div>
                 </div>
-                
                 <!-- Экстраверты -->
                 <div class="famous-card">
-                    <div class="famous-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Salvador_Dali_%28Portrait%29.jpg/800px-Salvador_Dali_%28Portrait%29.jpg');">
-                        <span class="famous-type type-extrovert">Экстраверт</span>
-                    </div>
-                    <div class="famous-info">
-                        <h3>Сальвадор Дали</h3>
-                        <h4>«Постоянство памяти»</h4>
-                        <p>Испанский художник-сюрреалист. Известен своим эпатажным поведением, любовью к публичности и самопиаром. Всегда был в центре внимания, активно взаимодействовал с обществом.</p>
-                    </div>
+                    <div class="famous-image" style="background-image: url('https://www.moma.org/media/W1siZiIsIjE1Mzg5OSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg?sha=5a0f6d8f0d5d5b5b');"><span class="famous-type type-extrovert">Экстраверт</span></div>
+                    <div class="famous-info"><h3>Сальвадор Дали</h3><h4>«Постоянство памяти»</h4><p>Испанский художник-сюрреалист. Известен своим эпатажным поведением, любовью к публичности и самопиаром. Всегда был в центре внимания, активно взаимодействовал с обществом.</p></div>
                 </div>
-                
                 <div class="famous-card">
-                    <div class="famous-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Philipp_Maljavin.jpg/800px-Philipp_Maljavin.jpg');">
-                        <span class="famous-type type-extrovert">Экстраверт</span>
-                    </div>
-                    <div class="famous-info">
-                        <h3>Филипп Андреевич Малявин</h3>
-                        <h4>«Вихрь»</h4>
-                        <p>Русский живописец. Его картины отличаются яркостью, динамикой, энергией. Сам художник был общительным, участвовал в выставках и художественной жизни, любил яркие краски и выразительные формы.</p>
-                    </div>
+                    <div class="famous-image" style="background-image: url('https://my.tretyakov.ru/storage/pictures/post/1/2/3/123/main.jpg');"><span class="famous-type type-extrovert">Экстраверт</span></div>
+                    <div class="famous-info"><h3>Филипп Андреевич Малявин</h3><h4>«Вихрь»</h4><p>Русский живописец. Его картины отличаются яркостью, динамикой, энергией. Сам художник был общительным, участвовал в выставках и художественной жизни, любил яркие краски и выразительные формы.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Quiz -->
+        <!-- Тест (15 вопросов) -->
         <section id="quiz">
             <h2 class="section-title">Кто вы: интроверт, экстраверт или амбиверт?</h2>
             <p class="intro-text">Пройдите тест Айзенка (15 вопросов), чтобы определить свой тип личности</p>
-            
             <div class="quiz-container">
                 <div id="quiz-content">
                     <div class="question" id="question">Вопрос 1/15: Любите ли вы шум и оживление вокруг?</div>
-                    <div class="options" id="options">
-                        <!-- Options will be loaded here -->
-                    </div>
+                    <div class="options" id="options"></div>
                     <button class="quiz-btn" id="next-btn">Следующий вопрос</button>
                 </div>
-                
-                <div id="result" class="result">
-                    <h3 id="result-title">Результат теста</h3>
-                    <p id="result-text">Текст результата</p>
-                    <button class="quiz-btn" id="restart-btn">Пройти тест снова</button>
-                </div>
+                <div id="result" class="result"><h3 id="result-title">Результат теста</h3><p id="result-text">Текст результата</p><button class="quiz-btn" id="restart-btn">Пройти тест снова</button></div>
             </div>
         </section>
 
-        <!-- Tips -->
+        <!-- Таблица результатов -->
+        <section id="results">
+            <h2 class="section-title">Результаты участников</h2>
+            <p class="intro-text">Здесь сохраняются имена и результаты тех, кто прошёл тест</p>
+            <div class="results-container">
+                <table class="results-table" id="resultsTable">
+                    <thead><tr><th>Имя</th><th>Результат</th><th>Дата</th></tr></thead>
+                    <tbody id="resultsBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Советы -->
         <section id="tips">
             <h2 class="section-title">Советы для взаимодействия</h2>
-            
             <div class="comparison-container">
-                <div class="type-card introvert-card">
-                    <div class="type-title introvert-title">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Советы для интровертов</h3>
-                    </div>
-                    <ul class="characteristics-list introvert-list">
-                        <li><i class="fas fa-check"></i> Планируйте время для уединения, чтобы восстановить энергию</li>
-                        <li><i class="fas fa-check"></i> Подготовьтесь к социальным событиям заранее, определите для себя комфортные границы</li>
-                        <li><i class="fas fa-check"></i> Не бойтесь говорить о своих потребностях в тишине и покое</li>
-                        <li><i class="fas fa-check"></i> Используйте письменное общение, когда устное даётся сложно</li>
-                        <li><i class="fas fa-check"></i> Найдите друзей-единомышленников, которые понимают вашу потребность в уединении</li>
-                    </ul>
-                </div>
-                
-                <div class="type-card extrovert-card">
-                    <div class="type-title extrovert-title">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Советы для экстравертов</h3>
-                    </div>
-                    <ul class="characteristics-list extrovert-list">
-                        <li><i class="fas fa-check"></i> Уважайте потребность интровертов в тишине и личном пространстве</li>
-                        <li><i class="fas fa-check"></i> Давайте другим время подумать перед ответом, не перебивайте</li>
-                        <li><i class="fas fa-check"></i> Попробуйте иногда проводить время в одиночестве, это может открыть новые стороны вашей личности</li>
-                        <li><i class="fas fa-check"></i> Учитесь слушать так же активно, как и говорить</li>
-                        <li><i class="fas fa-check"></i> Планируйте активные мероприятия, но оставляйте время для отдыха</li>
-                    </ul>
-                </div>
+                <div class="type-card introvert-card"><div class="type-title introvert-title"><i class="fas fa-lightbulb"></i><h3>Советы для интровертов</h3></div><ul class="characteristics-list introvert-list"><li><i class="fas fa-check"></i> Планируйте время для уединения, чтобы восстановить энергию</li><li><i class="fas fa-check"></i> Подготовьтесь к социальным событиям заранее, определите для себя комфортные границы</li><li><i class="fas fa-check"></i> Не бойтесь говорить о своих потребностях в тишине и покое</li><li><i class="fas fa-check"></i> Используйте письменное общение, когда устное даётся сложно</li><li><i class="fas fa-check"></i> Найдите друзей-единомышленников, которые понимают вашу потребность в уединении</li></ul></div>
+                <div class="type-card extrovert-card"><div class="type-title extrovert-title"><i class="fas fa-lightbulb"></i><h3>Советы для экстравертов</h3></div><ul class="characteristics-list extrovert-list"><li><i class="fas fa-check"></i> Уважайте потребность интровертов в тишине и личном пространстве</li><li><i class="fas fa-check"></i> Давайте другим время подумать перед ответом, не перебивайте</li><li><i class="fas fa-check"></i> Попробуйте иногда проводить время в одиночестве, это может открыть новые стороны вашей личности</li><li><i class="fas fa-check"></i> Учитесь слушать так же активно, как и говорить</li><li><i class="fas fa-check"></i> Планируйте активные мероприятия, но оставляйте время для отдыха</li></ul></div>
             </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <div style="background-color: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow); max-width: 800px; margin: 0 auto;">
-                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">Амбиверты — золотая середина</h3>
-                    <p>Многие люди находятся между интроверсией и экстраверсией — их называют амбивертами. Они могут проявлять черты обоих типов в зависимости от ситуации, настроения и контекста. Амбиверты гибко адаптируются к разным социальным условиям и могут чувствовать себя комфортно как в компании, так и в одиночестве.</p>
-                </div>
-            </div>
+            <div style="text-align:center; margin-top:2rem;"><div style="background-color:white; padding:2rem; border-radius:12px; box-shadow:var(--shadow); max-width:800px; margin:0 auto;"><h3 style="color:var(--secondary-color); margin-bottom:1rem;">Амбиверты — золотая середина</h3><p>Многие люди находятся между интроверсией и экстраверсией — их называют амбивертами. Они могут проявлять черты обоих типов в зависимости от ситуации, настроения и контекста. Амбиверты гибко адаптируются к разным социальным условиям и могут чувствовать себя комфортно как в компании, так и в одиночестве.</p></div></div>
         </section>
     </main>
 
@@ -1002,407 +851,198 @@
     </footer>
 
     <script>
-        // Тест Айзенка - 15 вопросов
+        // --- Тест Айзенка - 15 вопросов (сохранение результатов, регистрация) ---
+        let currentUser = null;
         const quizData = [
-            {
-                question: "Вопрос 1/15: Любите ли вы шум и оживление вокруг?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 2/15: Часто ли вы нуждаетесь в компании друзей?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 3/15: Вы обычно быстрый и активный человек?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 4/15: Легко ли вы знакомитесь с новыми людьми?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 5/15: Вы любите быть в центре внимания?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 6/15: Вы часто ищете новые впечатления?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 7/15: Вы предпочитаете действовать, а не размышлять?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 8/15: Вы быстро принимаете решения?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 9/15: Вы любите участвовать в общих мероприятиях?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 10/15: Вы часто берёте инициативу в свои руки?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 11/15: Любите ли вы оживлённые вечеринки?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 12/15: Нравится ли вам работа, требующая частых контактов с людьми?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 13/15: Вы любите делиться с другими своими мыслями и чувствами?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 14/15: Вы предпочитаете активный отдых спокойному времяпрепровождению?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            },
-            {
-                question: "Вопрос 15/15: Вы часто становитесь «душой компании»?",
-                options: [
-                    { text: "Да", value: "extrovert" },
-                    { text: "Нет", value: "introvert" }
-                ]
-            }
+            {question:"Вопрос 1/15: Любите ли вы шум и оживление вокруг?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 2/15: Часто ли вы нуждаетесь в компании друзей?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 3/15: Вы обычно быстрый и активный человек?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 4/15: Легко ли вы знакомитесь с новыми людьми?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 5/15: Вы любите быть в центре внимания?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 6/15: Вы часто ищете новые впечатления?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 7/15: Вы предпочитаете действовать, а не размышлять?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 8/15: Вы быстро принимаете решения?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 9/15: Вы любите участвовать в общих мероприятиях?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 10/15: Вы часто берёте инициативу в свои руки?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 11/15: Любите ли вы оживлённые вечеринки?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 12/15: Нравится ли вам работа, требующая частых контактов с людьми?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 13/15: Вы любите делиться с другими своими мыслями и чувствами?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 14/15: Вы предпочитаете активный отдых спокойному времяпрепровождению?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]},
+            {question:"Вопрос 15/15: Вы часто становитесь «душой компании»?",options:[{text:"Да",value:"extrovert"},{text:"Нет",value:"introvert"}]}
         ];
-
         const resultData = {
-            introvert: {
-                title: "Вы скорее интроверт!",
-                text: "Вы черпаете энергию из внутреннего мира, цените уединение и глубокие размышления. Вам комфортнее в небольших компаниях или в одиночестве. Вы тщательно обдумываете решения прежде чем действовать. Помните, что интроверсия — это не недостаток, а особенность восприятия мира. По тесту Айзенка вы набрали 0-4 балла по шкале экстраверсии."
-            },
-            extrovert: {
-                title: "Вы скорее экстраверт!",
-                text: "Вы получаете энергию от общения с людьми и активной деятельности. Вам нравится быть в центре событий, заводить новые знакомства и делиться идеями. Вы быстро адаптируетесь к новым ситуациям и часто действуете спонтанно. Ваша общительность помогает вам в достижении целей. По тесту Айзенка вы набрали 11-15 баллов по шкале экстраверсии."
-            },
-            ambivert: {
-                title: "Вы амбиверт!",
-                text: "Вы сочетаете в себе черты интроверта и экстраверта, что даёт вам гибкость в разных ситуациях. Вы можете наслаждаться общением с людьми, но также цените время, проведённое в одиночестве. Вы умеете адаптироваться к обстоятельствам и находите баланс между социальной активностью и личным пространством. По тесту Айзенка вы набрали 5-10 баллов по шкале экстраверсии."
-            }
+            introvert:{title:"Вы скорее интроверт!",text:"Вы черпаете энергию из внутреннего мира, цените уединение и глубокие размышления. Вам комфортнее в небольших компаниях или в одиночестве. Вы тщательно обдумываете решения прежде чем действовать. Помните, что интроверсия — это не недостаток, а особенность восприятия мира. По тесту Айзенка вы набрали 0-4 балла по шкале экстраверсии.",badge:"Интроверт"},
+            extrovert:{title:"Вы скорее экстраверт!",text:"Вы получаете энергию от общения с людьми и активной деятельности. Вам нравится быть в центре событий, заводить новые знакомства и делиться идеями. Вы быстро адаптируетесь к новым ситуациям и часто действуете спонтанно. Ваша общительность помогает вам в достижении целей. По тесту Айзенка вы набрали 11-15 баллов по шкале экстраверсии.",badge:"Экстраверт"},
+            ambivert:{title:"Вы амбиверт!",text:"Вы сочетаете в себе черты интроверта и экстраверта, что даёт вам гибкость в разных ситуациях. Вы можете наслаждаться общением с людьми, но также цените время, проведённое в одиночестве. Вы умеете адаптироваться к обстоятельствам и находите баланс между социальной активностью и личным пространством. По тесту Айзенка вы набрали 5-10 баллов по шкале экстраверсии.",badge:"Амбиверт"}
         };
+        let currentQuestion=0, answers=[];
+        const qEl=document.getElementById('question'), optsEl=document.getElementById('options'), nextBtn=document.getElementById('next-btn'), resultEl=document.getElementById('result'), resultTitle=document.getElementById('result-title'), resultText=document.getElementById('result-text'), restartBtn=document.getElementById('restart-btn'), quizContent=document.getElementById('quiz-content');
 
-        let currentQuestion = 0;
-        let answers = [];
-
-        const questionElement = document.getElementById('question');
-        const optionsElement = document.getElementById('options');
-        const nextButton = document.getElementById('next-btn');
-        const resultElement = document.getElementById('result');
-        const resultTitle = document.getElementById('result-title');
-        const resultText = document.getElementById('result-text');
-        const restartButton = document.getElementById('restart-btn');
-        const quizContent = document.getElementById('quiz-content');
-
-        function loadQuestion() {
-            const currentQuizData = quizData[currentQuestion];
-            questionElement.textContent = currentQuizData.question;
-            
-            optionsElement.innerHTML = '';
-            currentQuizData.options.forEach(option => {
-                const optionElement = document.createElement('div');
-                optionElement.classList.add('option');
-                optionElement.textContent = option.text;
-                optionElement.dataset.value = option.value;
-                optionElement.addEventListener('click', selectOption);
-                optionsElement.appendChild(optionElement);
-            });
-            
-            nextButton.textContent = currentQuestion === quizData.length - 1 ? "Завершить тест" : "Следующий вопрос";
-            
-            // Анимация появления вопроса
-            questionElement.style.opacity = 0;
-            questionElement.style.transform = "translateY(20px)";
-            setTimeout(() => {
-                questionElement.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-                questionElement.style.opacity = 1;
-                questionElement.style.transform = "translateY(0)";
-            }, 100);
-            
-            // Анимация появления вариантов ответов
-            const optionElements = document.querySelectorAll('.option');
-            optionElements.forEach((option, index) => {
-                option.style.opacity = 0;
-                option.style.transform = "translateY(20px)";
-                setTimeout(() => {
-                    option.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
-                    option.style.opacity = 1;
-                    option.style.transform = "translateY(0)";
-                }, 200);
-            });
+        function getResults(){return JSON.parse(localStorage.getItem('quizResults')||'[]');}
+        function saveResult(name,type){
+            const r=getResults();
+            r.push({name,result:type,badge:resultData[type].badge,date:new Date().toLocaleString('ru-RU')});
+            localStorage.setItem('quizResults',JSON.stringify(r));
+            displayResults();
+        }
+        function displayResults(){
+            const b=document.getElementById('resultsBody'), r=getResults();
+            if(!r.length){b.innerHTML='<tr><td colspan="3" style="text-align:center; padding:2rem;">Пока нет результатов. Пройдите тест!</td></tr>';return;}
+            b.innerHTML=r.map(r=>{
+                let bc='';
+                if(r.result==='introvert') bc='badge-introvert';
+                else if(r.result==='extrovert') bc='badge-extrovert';
+                else bc='badge-ambivert';
+                return `<tr><td>${r.name}</td><td><span class="result-badge ${bc}">${r.badge}</span></td><td>${r.date}</td></tr>`;
+            }).join('');
         }
 
-        function selectOption(e) {
-            const options = document.querySelectorAll('.option');
-            options.forEach(option => {
-                option.classList.remove('selected');
+        // Модальное окно
+        const modal=document.getElementById('registrationModal'), regBtn=document.getElementById('registerBtn'), nameInput=document.getElementById('userName');
+        if(!sessionStorage.getItem('registered')) modal.style.display='flex';
+        else currentUser=sessionStorage.getItem('userName');
+        regBtn.addEventListener('click',()=>{
+            let n=nameInput.value.trim();
+            if(!n){alert('Введите имя');return;}
+            currentUser=n;
+            sessionStorage.setItem('registered','true');
+            sessionStorage.setItem('userName',n);
+            modal.style.display='none';
+        });
+        window.addEventListener('click',e=>{
+            if(e.target===modal){
+                let n=nameInput.value.trim();
+                if(!n){alert('Введите имя');return;}
+                currentUser=n;
+                sessionStorage.setItem('registered','true');
+                sessionStorage.setItem('userName',n);
+                modal.style.display='none';
+            }
+        });
+
+        function loadQuestion(){
+            let q=quizData[currentQuestion];
+            qEl.textContent=q.question;
+            optsEl.innerHTML='';
+            q.options.forEach(o=>{
+                let opt=document.createElement('div');
+                opt.classList.add('option');
+                opt.textContent=o.text;
+                opt.dataset.value=o.value;
+                opt.addEventListener('click',selectOption);
+                optsEl.appendChild(opt);
             });
-            
+            nextBtn.textContent=currentQuestion===quizData.length-1?'Завершить тест':'Следующий вопрос';
+            // анимация
+            qEl.style.opacity='0'; qEl.style.transform='translateY(20px)';
+            setTimeout(()=>{qEl.style.transition='opacity 0.5s ease, transform 0.5s ease'; qEl.style.opacity='1'; qEl.style.transform='translateY(0)';},100);
+            document.querySelectorAll('.option').forEach((opt,i)=>{
+                opt.style.opacity='0'; opt.style.transform='translateY(20px)';
+                setTimeout(()=>{opt.style.transition=`opacity 0.5s ease ${i*0.1}s, transform 0.5s ease ${i*0.1}s`; opt.style.opacity='1'; opt.style.transform='translateY(0)';},200);
+            });
+        }
+        function selectOption(e){
+            document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));
             e.target.classList.add('selected');
-            nextButton.disabled = false;
+            nextBtn.disabled=false;
         }
-
-        function calculateResult() {
-            let extrovertCount = 0;
-            answers.forEach(answer => {
-                if (answer === 'extrovert') extrovertCount++;
-            });
-
-            if (extrovertCount >= 11) return 'extrovert';
-            else if (extrovertCount <= 4) return 'introvert';
+        function calculateResult(){
+            let c=0;
+            answers.forEach(a=>{if(a==='extrovert')c++;});
+            if(c>=11) return 'extrovert';
+            else if(c<=4) return 'introvert';
             else return 'ambivert';
         }
-
-        function showResult() {
-            const resultType = calculateResult();
-            resultTitle.textContent = resultData[resultType].title;
-            resultText.textContent = resultData[resultType].text;
-            
-            resultElement.className = 'result';
-            resultElement.classList.add(`${resultType}-result`);
-            
-            quizContent.style.display = 'none';
-            resultElement.style.display = 'block';
-            
-            // Анимация появления результата
-            resultElement.style.opacity = 0;
-            resultElement.style.transform = "translateY(30px)";
-            setTimeout(() => {
-                resultElement.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-                resultElement.style.opacity = 1;
-                resultElement.style.transform = "translateY(0)";
-            }, 100);
+        function showResult(){
+            let t=calculateResult();
+            resultTitle.textContent=resultData[t].title;
+            resultText.textContent=resultData[t].text;
+            resultEl.className='result'; resultEl.classList.add(t+'-result');
+            quizContent.style.display='none'; resultEl.style.display='block';
+            if(currentUser) saveResult(currentUser,t);
+            resultEl.style.opacity='0'; resultEl.style.transform='translateY(30px)';
+            setTimeout(()=>{resultEl.style.transition='opacity 0.8s ease, transform 0.8s ease'; resultEl.style.opacity='1'; resultEl.style.transform='translateY(0)';},100);
         }
-
-        nextButton.addEventListener('click', function() {
-            const selectedOption = document.querySelector('.option.selected');
-            
-            if (!selectedOption) {
-                alert('Пожалуйста, выберите вариант ответа');
-                return;
-            }
-            
-            answers.push(selectedOption.dataset.value);
-            
-            if (currentQuestion < quizData.length - 1) {
-                currentQuestion++;
-                loadQuestion();
-            } else {
-                showResult();
-            }
+        nextBtn.addEventListener('click',function(){
+            let sel=document.querySelector('.option.selected');
+            if(!sel){alert('Выберите ответ');return;}
+            answers.push(sel.dataset.value);
+            if(currentQuestion<quizData.length-1){currentQuestion++; loadQuestion();}
+            else showResult();
         });
-
-        restartButton.addEventListener('click', () => {
-            currentQuestion = 0;
-            answers = [];
+        restartBtn.addEventListener('click',()=>{
+            currentQuestion=0; answers=[];
             loadQuestion();
-            quizContent.style.display = 'block';
-            resultElement.style.display = 'none';
-            
-            // Анимация появления теста снова
-            quizContent.style.opacity = 0;
-            quizContent.style.transform = "translateY(20px)";
-            setTimeout(() => {
-                quizContent.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-                quizContent.style.opacity = 1;
-                quizContent.style.transform = "translateY(0)";
-            }, 100);
+            quizContent.style.display='block'; resultEl.style.display='none';
+            quizContent.style.opacity='0'; quizContent.style.transform='translateY(20px)';
+            setTimeout(()=>{quizContent.style.transition='opacity 0.5s ease, transform 0.5s ease'; quizContent.style.opacity='1'; quizContent.style.transform='translateY(0)';},100);
         });
 
-        // Navigation highlighting
-        const navLinks = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Scroll progress indicator
-            const scrollTop = document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (scrollTop / scrollHeight) * 100;
-            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        // Навигация и скролл
+        const navLinks=document.querySelectorAll('nav a'), sections=document.querySelectorAll('section');
+        window.addEventListener('scroll',()=>{
+            let cur='';
+            sections.forEach(s=>{if(pageYOffset>=s.offsetTop-200) cur=s.getAttribute('id');});
+            navLinks.forEach(l=>{l.classList.remove('active'); if(l.getAttribute('href').substring(1)===cur) l.classList.add('active');});
+            let sTop=document.documentElement.scrollTop, sHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+            document.getElementById('scrollProgress').style.width=(sTop/sHeight*100)+'%';
         });
-
-        // Smooth scrolling for navigation links
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+        navLinks.forEach(l=>{
+            l.addEventListener('click',function(e){
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#home') {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    const targetSection = document.querySelector(targetId);
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+                let t=this.getAttribute('href');
+                if(t==='#home') window.scrollTo({top:0,behavior:'smooth'});
+                else window.scrollTo({top:document.querySelector(t).offsetTop-80,behavior:'smooth'});
             });
         });
 
-        // Анимация появления секций при скролле
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    
-                    // Анимация для карточек в видимой секции
-                    if (entry.target.id === 'home') {
-                        const cards = entry.target.querySelectorAll('.type-card');
-                        cards.forEach((card, index) => {
-                            setTimeout(() => {
-                                card.style.animationDelay = `${index * 0.2}s`;
-                                if (card.classList.contains('introvert-card')) {
-                                    card.classList.add('animate-left');
-                                } else {
-                                    card.classList.add('animate-right');
-                                }
-                            }, 300);
+        // Intersection Observer
+        const observer=new IntersectionObserver((entries)=>{
+            entries.forEach(e=>{
+                if(e.isIntersecting){
+                    e.target.classList.add('visible');
+                    if(e.target.id==='home'){
+                        let cards=e.target.querySelectorAll('.type-card');
+                        cards.forEach((c,i)=>{
+                            setTimeout(()=>{c.style.animationDelay=i*0.2+'s'; if(c.classList.contains('introvert-card')) c.classList.add('animate-left'); else c.classList.add('animate-right');},300);
                         });
-                        
-                        // Анимация статистики
-                        setTimeout(() => {
-                            document.getElementById('introvertBar').style.width = '40%';
-                            document.getElementById('extrovertBar').style.width = '60%';
-                            
-                            let introPercent = 0;
-                            let extroPercent = 0;
-                            const interval = setInterval(() => {
-                                introPercent += 1;
-                                extroPercent += 1.5;
-                                document.getElementById('introvertPercent').textContent = introPercent + '%';
-                                document.getElementById('extrovertPercent').textContent = extroPercent + '%';
-                                
-                                if (introPercent >= 40 && extroPercent >= 60) {
-                                    clearInterval(interval);
-                                }
-                            }, 30);
-                        }, 1000);
+                        setTimeout(()=>{
+                            document.getElementById('introvertBar').style.width='40%';
+                            document.getElementById('extrovertBar').style.width='60%';
+                            let ip=0,ep=0;
+                            let iv=setInterval(()=>{ip+=1; ep+=1.5; document.getElementById('introvertPercent').textContent=ip+'%'; document.getElementById('extrovertPercent').textContent=ep+'%'; if(ip>=40&&ep>=60) clearInterval(iv);},30);
+                        },1000);
                     }
                 }
             });
-        }, observerOptions);
+        },{threshold:0.1,rootMargin:'0px 0px -100px 0px'});
+        sections.forEach(s=>observer.observe(s));
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Создание частиц в футере
-        function createParticles() {
-            const particlesContainer = document.getElementById('footerParticles');
-            const particleCount = 20;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Случайный размер
-                const size = Math.random() * 10 + 5;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                // Случайная позиция
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                
-                // Случайная задержка анимации
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
-                
-                // Случайный цвет
-                const colors = ['rgba(255, 255, 255, 0.3)', 'rgba(76, 201, 240, 0.3)', 'rgba(247, 37, 133, 0.3)'];
-                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                
-                particlesContainer.appendChild(particle);
+        // Частицы
+        function createParticles(){
+            let pc=document.getElementById('footerParticles');
+            for(let i=0;i<20;i++){
+                let p=document.createElement('div'); p.classList.add('particle');
+                let s=Math.random()*10+5; p.style.width=s+'px'; p.style.height=s+'px';
+                p.style.left=Math.random()*100+'%'; p.style.top=Math.random()*100+'%';
+                p.style.animationDelay=Math.random()*5+'s'; p.style.animationDuration=Math.random()*10+10+'s';
+                let clr=['rgba(255,255,255,0.3)','rgba(76,201,240,0.3)','rgba(247,37,133,0.3)'];
+                p.style.backgroundColor=clr[Math.floor(Math.random()*clr.length)];
+                pc.appendChild(p);
             }
         }
 
-        // Инициализация
-        window.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('DOMContentLoaded',()=>{
             loadQuestion();
             createParticles();
-            
-            // Анимация появления первых карточек
-            setTimeout(() => {
-                const cards = document.querySelectorAll('.type-card');
-                cards.forEach((card, index) => {
-                    card.style.animationDelay = `${index * 0.2}s`;
-                    if (card.classList.contains('introvert-card')) {
-                        card.classList.add('animate-left');
-                    } else {
-                        card.classList.add('animate-right');
-                    }
+            displayResults();
+            setTimeout(()=>{
+                document.querySelectorAll('.type-card').forEach((c,i)=>{
+                    c.style.animationDelay=i*0.2+'s';
+                    if(c.classList.contains('introvert-card')) c.classList.add('animate-left');
+                    else c.classList.add('animate-right');
                 });
-            }, 500);
+            },500);
         });
     </script>
 </body>
